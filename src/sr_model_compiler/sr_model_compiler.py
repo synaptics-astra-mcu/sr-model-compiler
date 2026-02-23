@@ -551,7 +551,7 @@ def get_compiler_argparser():
 
     # Define args
     parser = argparse.ArgumentParser(
-        description="Wrapper script to compile a TFLite model onto SR devices."
+        description="Python toolchain to build AI models for Synaptics SR100 and SRW1500 family of parts"
     )
     parser.add_argument(
         "-m", "--model-file", type=str, help="Path to TFLite model file"
