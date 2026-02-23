@@ -1,0 +1,40 @@
+[project]
+name = "sr-model-compiler"
+version = "0.4.2"
+description = "Synaptics SR model compiler tooling"
+authors = [{ name = "Synaptics Inc", email = "support@synaptics.com" }]
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "ethos-u-vela==4.3.0",
+    "argparse~=1.4.0",
+    "Jinja2~=2.11.2",
+    "numpy==1.26.0",
+    "tensorflow~=2.19.0",
+    "markupsafe==2.0.1",
+    "mako",
+]
+
+[project.optional-dependencies]
+dev = [
+    "black",
+    "pylint",
+    "pytest"
+]
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+"sr_model_compiler" = ["templates/*", "config/*"]
+
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project.scripts]
+sr_model_compiler = "sr_model_compiler.sr_model_compiler:main"
+sr100_model_optimizer = "sr_model_compiler.sr100_model_optimizer:main"

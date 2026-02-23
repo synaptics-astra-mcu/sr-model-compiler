@@ -1,0 +1,5 @@
+config UC_PERSON_SEGMENTATION_ENABLED
+    bool "UC_PERSON_SEGMENTATION_ENABLED"
+    select MODULE_NPU_ENABLED
+    help
+        This config enables the Segmentation usecase. The UC_PERSON_SEGMENTATION sample application is used for real-time semantic segmentation of persons within the camera's field of view. This application identifies whether a person is present in the frame and provides a pixel-level segmentation mask for each detected individual. In addition to the segmentation mask, it also outputs the bounding box coordinates for each segmented person. The application supports segmentation of multiple persons simultaneously within a single frame, enabling detailed spatial understanding of each individual in the scene.

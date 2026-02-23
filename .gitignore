@@ -1,0 +1,4 @@
+tests/__pycache__
+src/sr_model_compiler.egg-info/
+src/sr_model_compiler/__pycache__/
+

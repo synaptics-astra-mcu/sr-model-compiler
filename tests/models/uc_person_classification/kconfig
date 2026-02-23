@@ -1,0 +1,5 @@
+config UC_PERSON_CLASSIFICATION_ENABLED
+    bool "UC_PERSON_CLASSIFICATION_ENABLED"
+    select MODULE_NPU_ENABLED
+    help
+        This config enables the Person classification usecase. The UC_PERSON_CLASSIFICATION sample application is used for binary classification of objects in the camera's field of view. This application identifies whether the object in view is a person or not a person, and classifies it accordingly into one of the two predefined classes.

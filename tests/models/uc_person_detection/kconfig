@@ -1,0 +1,5 @@
+config UC_PERSON_DETECTION_ENABLED
+    bool "UC_PERSON_DETECTION_ENABLED"
+    select MODULE_NPU_ENABLED
+    help
+        This config enables the Detection usecase. The UC_PERSON_DETECTION sample application is used for real-time object detection within the camera's field of view. This application identifies whether a person is present in the frame and provides the bounding box coordinates for each detected individual. Along with the coordinates, it also outputs a confidence score indicating the likelihood that the detected object is a person. The application supports detection of multiple persons simultaneously within a single frame.

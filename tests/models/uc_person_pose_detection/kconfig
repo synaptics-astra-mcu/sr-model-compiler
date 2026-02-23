@@ -1,0 +1,5 @@
+config UC_PERSON_POSE_DETECTION_ENABLED
+    bool "UC_PERSON_POSE_DETECTION_ENABLED"
+    select MODULE_NPU_ENABLED
+    help
+        This config enables the Person Pose Detection usecase. The UC_PERSON_POSE_DETECTION sample application is used for real-time human pose estimation within the camera's field of view. This application detects persons in the frame and provides keypoints corresponding to major joints of the human body. For each detected individual, it outputs 17 keypoints that represent anatomical landmarks such as the head, shoulders, elbows, wrists, hips, knees, and ankles. These keypoints can be connected to form a skeletal representation, effectively capturing the pose of the person. In addition to the keypoints, the application also provides the bounding box coordinates for each detected person. The application supports pose detection for multiple persons simultaneously within a single frame.

@@ -1,0 +1,43 @@
+{{common_template_header}}
+
+#include <cstddef>
+#include <cstdint>
+
+#include "inference_attributes.hpp"
+#include "tensorflow/lite/micro/micro_mutable_op_resolver.h"
+
+{% for header in additional_headers %}
+#include "{{header}}"
+{% endfor %}
+
+namespace {{namespace}} {
+
+// Setup arena cache size
+static const uint8_t ARENA_CACHE_SIZE = {{arena_cache_size}};
+{% if tflite_loc == "sram" %}
+{% for expression in expressions %}
+{{expression}};
+{% endfor %}
+
+// Define the model binary 
+#if defined(__ARMCC_VERSION)
+static const uint8_t {{tflite_attribute}} nn_model[{{model_length}}] =
+#else
+static const uint8_t __attribute__((section("test_attribute"))) nn_model[{{model_length}}] =
+#endif
+{% for model_hex_line in model_data %}
+{{model_hex_line}}
+{% endfor %}
+
+const uint8_t * get_model_pointer(void)
+{
+    return nn_model;
+}
+
+size_t get_model_len(void)
+{
+    return sizeof(nn_model);
+}
+{% endif %}
+
+} /* namespace {{namespace}} */
