@@ -7,9 +7,9 @@ readme = "README.md"
 requires-python = ">=3.10"
 dependencies = [
     "ethos-u-vela==4.3.0",
-    "argparse~=1.4.0",
-    "Jinja2~=2.11.2",
-    "numpy==1.26.4",
+    "argparse==1.4.0",
+    "Jinja2==2.11.2",
+    "numpy==2.1.0",
     "tensorflow==2.20.0",
     "markupsafe==2.0.1",
     "mako",
