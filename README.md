@@ -1,5 +1,5 @@
-# srsdk-model-target
-Builds tooling to take a LiteRT model and target the SRSDK for the SR1xx and SRW1xxx series parts
+# SR-MODEL-COMPILER
+Python toolchain to build AI models for Synaptics SR100 and SRW1500 family of parts
 
 ## Links to the Vela compiler
 https://gitlab.arm.com/artificial-intelligence/ethos-u/ethos-u-vela
