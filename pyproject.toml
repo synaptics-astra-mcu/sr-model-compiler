@@ -9,7 +9,7 @@ dependencies = [
     "ethos-u-vela==4.3.0",
     "argparse~=1.4.0",
     "Jinja2~=2.11.2",
-    "numpy==1.26.0",
+    "numpy==1.26.4",
     "tensorflow~=2.19.0",
     "markupsafe==2.0.1",
     "mako",
